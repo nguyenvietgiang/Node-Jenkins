@@ -16,7 +16,7 @@ pipeline {
 
         stage('Run Server') {
             steps {
-                bat 'node src/server.js'
+                bat 'node server.js'
             }
         }
     }
