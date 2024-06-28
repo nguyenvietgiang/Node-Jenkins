@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clone Repository') {
             steps {
-                git 'https://github.com/nguyenvietgiang/Node-Jenkins.git'
+                git branch: 'main', url: 'https://github.com/nguyenvietgiang/Node-Jenkins.git'
             }
         }
 
@@ -21,3 +21,4 @@ pipeline {
         }
     }
 }
+
