@@ -10,15 +10,16 @@ pipeline {
 
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat 'npm install'
             }
         }
 
         stage('Run Server') {
             steps {
-                sh 'node src/server.js'
+                bat 'node src/server.js'
             }
         }
     }
 }
+
 
