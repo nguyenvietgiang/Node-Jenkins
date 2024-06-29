@@ -8,3 +8,6 @@
 
   CICD Testing project using ExpressJS and Jenkins
 ```
+
+- This CICD system uses Node and expressJS along with Jenkins using windows operating system
+- If you use Linux, please change the pipeline
