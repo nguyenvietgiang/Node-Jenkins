@@ -14,9 +14,9 @@ pipeline {
             }
         }
 
-        stage('Run Server') {
+        stage('Server Testing') {
             steps {
-                bat 'node server.js'
+                bat 'npm test'
             }
         }
     }
