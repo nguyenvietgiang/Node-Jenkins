@@ -19,6 +19,24 @@ pipeline {
                 bat 'npm test'
             }
         }
+
+        stage('Build Docker Image') {
+            steps {
+                script {
+                    dockerImage = docker.build("localhost:5000/node-jenkins-app:${env.BUILD_ID}")
+                }
+            }
+        }
+
+        stage('Push Docker Image') {
+            steps {
+                script {
+                    docker.withRegistry('http://localhost:5000', '') {
+                        dockerImage.push()
+                    }
+                }
+            }
+        }
     }
 
     post {
@@ -41,6 +59,7 @@ pipeline {
         }
     }
 }
+
 
 
 
