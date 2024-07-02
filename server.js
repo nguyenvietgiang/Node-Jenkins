@@ -6,7 +6,7 @@ const studentRoutes = require("./src/student");
 app.use("/students", studentRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Xin chào!");
+  res.send("Hello!");
 });
 
 app.listen(port, () => {
